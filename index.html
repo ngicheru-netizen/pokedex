@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex Explorer</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo-container">
+          <div class="pokeball-icon"></div>
+          <h1>POKÉDEX</h1>
+        </div>
+        <p class="subtitle">
+          Explore and learn detailed stats about all your favorite Pokémon
+        </p>
+      </header>
+
+      <section class="controls">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="Search Pokémon by name..."
+            autocomplete="off"
+          />
+        </div>
+        <div class="pagination-container">
+          <button id="prevBtn" class="btn" disabled>
+            <i class="fa-solid fa-chevron-left"></i> Prev
+          </button>
+          <span id="pageInfo" class="page-info">Page 1</span>
+          <button id="nextBtn" class="btn">
+            Next <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <main id="pokemonGrid" class="pokemon-grid">
+        <!-- Cards rendered dynamically -->
+      </main>
+    </div>
+
+    <!-- Modal for Detailed Abilities and Stats -->
+    <div id="modalOverlay" class="modal-overlay">
+      <div class="modal-content">
+        <button id="closeModal" class="close-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div id="modalBody" class="modal-body">
+          <!-- Content inserted via JS -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
